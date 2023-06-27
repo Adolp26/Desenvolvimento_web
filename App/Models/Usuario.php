@@ -106,7 +106,7 @@ class Usuario extends Model {
 		$stmt->execute();
 
 		return $stmt->fetchAll(\PDO::FETCH_ASSOC);
- 	}
+	}
 
 	public function seguirUsuario($id_usuario_seguindo) {
 		$query = "insert into usuarios_seguidores(id_usuario, id_usuario_seguindo)values(:id_usuario, :id_usuario_seguindo)";

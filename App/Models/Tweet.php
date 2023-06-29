@@ -4,26 +4,22 @@ namespace App\Models;
 
 use MF\Model\Model;
 
-class Tweet extends Model
-{
+class Tweet extends Model {
 	private $id;
 	private $id_usuario;
 	private $tweet;
 	private $data;
 
-	public function __get($atributo)
-	{
+	public function __get($atributo) {
 		return $this->$atributo;
 	}
 
-	public function __set($atributo, $valor)
-	{
+	public function __set($atributo, $valor) {
 		$this->$atributo = $valor;
 	}
 
 	//salvar
-	public function salvar()
-	{
+	public function salvar() {
 
 		$query = "insert into tweets(id_usuario, tweet)values(:id_usuario, :tweet)";
 		$stmt = $this->db->prepare($query);
@@ -35,8 +31,7 @@ class Tweet extends Model
 	}
 
 	//recuperar
-	public function getAll()
-	{
+	public function getAll() {
 
 		$query = "
 			select 
@@ -54,7 +49,7 @@ class Tweet extends Model
 			order by
 				t.data desc
 		";
- 
+
 		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':id_usuario', $this->__get('id_usuario'));
 		$stmt->execute();

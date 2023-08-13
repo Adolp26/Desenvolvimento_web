@@ -5,8 +5,8 @@
 	},
 	"authors": [
 		{
-			"name": "Jorge Sant Ana",
-			"email": "jorge@teste.com.br"
+			"name": "Teste",
+			"email": "teste@teste.com.br"
 		}
 	],
 	"autoload": {

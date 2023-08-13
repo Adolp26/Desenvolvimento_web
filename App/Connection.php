@@ -8,7 +8,7 @@ class Connection {
 		try {
 
 			$conn = new \PDO(
-				"mysql:host=localhost;dbname=twitter_clone;charset=utf8",
+				"mysql:host="";dbname="";charset=utf8",
 				"root",
 				"" 
 			);
